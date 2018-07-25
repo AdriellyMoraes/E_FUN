@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Entrar - E-FUN.</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="icon" type="imagem/png" href="IMG/ic.png" />
+        <link rel="stylesheet" type="text/css" href="cadastro.css">
+        <style>
+
+            body{
+                background-color: whitesmoke;
+            }
+
+            header{
+                display: block;
+                background: url(IMG/SPC1batata.jpg);
+                width: auto;
+            }
+
+            #cursor{
+                cursor: pointer;
+            }
+
+            aside{
+                display: block;
+                width: 29px;
+            }
+
+            fieldset
+            {
+                color: #000a40;
+                text-align: center;
+                width:600px;
+                height:300px;
+            }
+
+            #area
+            {
+                left: 25%;
+                position:relative;
+                top:5em;
+                width:320px;
+                height:270px;
+            }
+            
+            #cor{
+                color: #00aced;
+            }
+            
+            #box{
+                border-radius: 10px;
+                width: 325px;
+                height: 50px;
+                border-bottom-color: black;
+                
+                
+            }
+            a:link{
+                text-decoration: none;
+            }
+            
+            #botao {
+                background: #00aced;
+                width: 325px;
+                height: 50px;
+                color:black;
+                cursor: pointer;
+                border-radius: 10px;
+                border-color: #00aced;
+            }
+            
+            div{
+                font-family: Gotham;
+                font-weight: bold;
+            }
+            
+  
+        </style>
+
+        <script>
+            function home() {
+                window.location.href = "index.html";
+            }
+ 
+            function validar() {
+                nome = document.entrar.e;
+                senha = document.entrar.s;
+                if (nome.value == "user" && senha.value == "1234") {
+                    window.location.href = "usuario.html";
+                } else {
+                    window.alert("Dados inválidos");
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+        <header>
+            
+            <center>
+                
+                <img src="IMG/adas.png" width="130" onclick="home()" id="cursor">
+                
+            </center>
+            
+        </header>
+        <div align="center" id="area">
+            <form name="entrar">
+                <fieldset>
+
+                    <legend><font>ENTRAR NO E-FUN</font></legend>
+                    </br>
+                    <input type="text" id="box" name="e" placeholder="E-mail ou nome de usuário" maxlength="254"/></br></br>
+                    <input type="password" id="box" name="s" placeholder="Senha" maxlength="254"/></br></br>
+                    <input type="button" name="Entrar" value="Entrar" id= "botao" onclick="validar()"></br></br>
+                     <A href="j"><font id="cor">Esqueceu a senha?</font></A></br></br>
+                     Novo por aqui?<A href="cadastro.html"><font id="cor"> Cadastre-se agora</font></A></br></br>
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>
